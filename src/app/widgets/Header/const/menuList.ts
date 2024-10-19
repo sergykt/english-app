@@ -1,3 +1,5 @@
+import { routes } from '@/shared/config/routes';
+
 interface PageLink {
   title: string;
   href: string;
@@ -6,21 +8,21 @@ interface PageLink {
 export const pagesList: PageLink[] = [
   {
     title: 'navBar.games',
-    href: '/ru/games',
+    href: routes.games,
   },
   {
     title: 'navBar.about',
-    href: '/ru/about',
+    href: routes.about,
   },
 ];
 
 export const settingsList: PageLink[] = [
   {
     title: 'navBar.profile',
-    href: '/profile',
+    href: routes.profile,
   },
   {
     title: 'navBar.logout',
-    href: '/logout',
+    href: routes.home,
   },
 ];
