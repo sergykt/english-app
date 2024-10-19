@@ -1,8 +1,8 @@
-import { type Metadata } from 'next';
+import { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'English App',
+  title: 'English App - application for learning English',
   description: 'English App for common purpose',
 };
 

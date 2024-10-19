@@ -1,6 +1,13 @@
 {
+  "title": "English App - приложение для изучения английского языка",
+  "description": "English App для общих целей",
   "HomePage": {
-    "title": "Привет мир!",
-    "about": "О нас"
+    "title": "Привет мир!"
+  },
+  "navBar": {
+    "games": "Игры",
+    "about": "О нас",
+    "profile": "Профиль",
+    "logout": "Выход"
   }
 }

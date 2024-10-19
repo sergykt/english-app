@@ -1,9 +1,7 @@
-import { useTranslations } from 'next-intl';
+import { HomePage } from '@/pages/HomePage';
 
-const HomePage = () => {
-  const t = useTranslations('HomePage');
-
-  return <div>{t('title')}</div>;
+const Home = () => {
+  return <HomePage />;
 };
 
-export default HomePage;
+export default Home;

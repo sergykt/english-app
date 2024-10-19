@@ -1,6 +1,13 @@
 {
+  "title": "English App - application for learning English",
+  "description": "English App for common purpose",
   "HomePage": {
-    "title": "Hello World!",
-    "about": "About"
+    "title": "Hello World!"
+  },
+  "navBar": {
+    "games": "Games",
+    "about": "About",
+    "profile": "Profile",
+    "logout": "Logout"
   }
 }
