@@ -15,7 +15,7 @@ export const Logo = () => {
       href={buildUrl(routes.home, locale)}
       sx={{
         mr: 2,
-        fontFamily: 'monospace',
+        fontFamily: 'Helvetica',
         fontWeight: 700,
         color: 'inherit',
         textDecoration: 'none',

@@ -5,7 +5,7 @@ export interface Language {
   name: string;
 }
 
-export const languages: Language[] = [
+export const languages: Readonly<Language[]> = [
   {
     locale: 'en',
     name: 'Eng',

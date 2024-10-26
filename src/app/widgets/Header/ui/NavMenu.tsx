@@ -17,7 +17,7 @@ export const NavMenu = () => {
           key={page.title}
           component={Link}
           href={buildUrl(page.href, locale)}
-          sx={{ my: 2, color: '#fff', display: 'block' }}
+          sx={{ color: '#fff', display: 'block' }}
         >
           {t(page.title)}
         </Button>

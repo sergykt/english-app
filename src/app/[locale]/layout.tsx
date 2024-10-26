@@ -2,8 +2,11 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
+import { Box, Stack } from '@mui/material';
 import { Roboto } from 'next/font/google';
-import theme from '@/shared/ui/theme';
+import { Header } from '@/widgets/Header';
+import { type PageParams } from '@/shared/model/pageParams';
+import theme from '@/shared/ui/styles/theme';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -20,13 +23,6 @@ export const generateMetadata = async () => {
   };
 };
 
-type PageParams = Readonly<{
-  params: {
-    locale: string;
-  };
-  children?: React.ReactNode;
-}>;
-
 const LocaleLayout = async ({ children, params }: Readonly<PageParams>) => {
   const messages = await getMessages();
 
@@ -35,7 +31,17 @@ const LocaleLayout = async ({ children, params }: Readonly<PageParams>) => {
       <body className={roboto.variable}>
         <NextIntlClientProvider messages={messages}>
           <AppRouterCacheProvider>
-            <ThemeProvider theme={theme}>{children}</ThemeProvider>
+            <ThemeProvider theme={theme}>
+              <Stack sx={{ minHeight: '100%' }}>
+                <Header />
+                <Box
+                  component='main'
+                  sx={{ flex: '1 1 0', height: 'max-content', pt: 'var(--header-height)' }}
+                >
+                  {children}
+                </Box>
+              </Stack>
+            </ThemeProvider>
           </AppRouterCacheProvider>
         </NextIntlClientProvider>
       </body>

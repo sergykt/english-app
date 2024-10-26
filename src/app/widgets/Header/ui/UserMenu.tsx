@@ -50,5 +50,3 @@ export const UserMenu = () => {
     </Stack>
   );
 };
-
-export default UserMenu;

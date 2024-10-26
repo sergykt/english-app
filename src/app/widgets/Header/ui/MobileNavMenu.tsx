@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { buildUrl } from '@/shared/lib/buildUrl';
 import { pagesList } from '../const/menuList';
 
-const MobileNavMenu = () => {
+export const MobileNavMenu = () => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const t = useTranslations();
   const locale = useLocale();
@@ -65,5 +65,3 @@ const MobileNavMenu = () => {
     </Box>
   );
 };
-
-export default MobileNavMenu;

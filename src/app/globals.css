@@ -1,4 +1,5 @@
-@import '@/shared/ui/normalize.css';
+@import '@/shared/ui/styles/normalize.css';
+@import '@/shared/ui/styles/variables.css';
 
 html,
 body {
